@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureAuth | Login & Register</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="auth-container">
+    <section class="auth-card">
+      <a href="#" class="brand">
+        <span class="brand-icon">S</span> SecureAuth
+      </a>
+
+      <div class="heading">
+        <h1 id="formTitle">Welcome back!</h1>
+        <p id="formSubtitle">Sign in to continue to your account.</p>
+      </div>
+
+      <div class="tabs" role="group" aria-label="Choose form">
+        <button type="button" id="loginTab" class="tab active">
+          Login
+        </button>
+        <button type="button" id="registerTab" class="tab">
+          Register
+        </button>
+      </div>
+
+      <form id="authForm" novalidate>
+        <div class="field" id="nameField" hidden>
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName"
+            placeholder="Enter your full name"
+            autocomplete="name" aria-describedby="nameError">
+          <small class="error" id="nameError" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email"
+            placeholder="you@example.com"
+            autocomplete="email" required
+            aria-describedby="emailError">
+          <small class="error" id="emailError" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input type="password" id="password"
+              placeholder="At least 8 characters"
+              autocomplete="current-password" required
+              aria-describedby="passwordError">
+            <button type="button" class="eye"
+              data-target="password"
+              aria-label="Show password"
+              aria-pressed="false">Show</button>
+          </div>
+          <small class="error" id="passwordError"
+            aria-live="polite"></small>
+        </div>
+
+        <div class="field" id="confirmField" hidden>
+          <label for="confirmPassword">Confirm Password</label>
+          <div class="password-wrap">
+            <input type="password" id="confirmPassword"
+              placeholder="Re-enter your password"
+              autocomplete="new-password"
+              aria-describedby="confirmError">
+            <button type="button" class="eye"
+              data-target="confirmPassword"
+              aria-label="Show confirm password"
+              aria-pressed="false">Show</button>
+          </div>
+          <small class="error" id="confirmError"
+            aria-live="polite"></small>
+        </div>
+
+        <div class="form-options" id="loginOptions">
+          <label class="remember">
+            <input type="checkbox" id="remember">
+            Remember me
+          </label>
+          <span class="muted">Demo interface</span>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          Sign In
+        </button>
+
+        <p class="status" id="statusMessage"
+          role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="switch-text" id="switchText">
+        Don't have an account?
+        <button type="button" id="switchButton">Create one</button>
+      </p>
+
+      <p class="security-note">
+        🔒 Your information stays in this demo browser session.
+      </p>
+    </section>
+
+    <aside class="side-panel">
+      <div class="decor decor-one"></div>
+      <div class="decor decor-two"></div>
+      <div class="side-content">
+        <span class="eyebrow">SIMPLE. MODERN. SECURE.</span>
+        <h2>Your journey<br>starts here.</h2>
+        <p>Experience a clean authentication interface
+          designed for a seamless user experience.</p>
+        <div class="feature">
+          <span>✓</span> Real-time form validation
+        </div>
+        <div class="feature">
+          <span>✓</span> Responsive on every device
+        </div>
+        <div class="feature">
+          <span>✓</span> Password visibility controls
+        </div>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
